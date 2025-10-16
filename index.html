@@ -437,24 +437,91 @@
 
 
 
-  
+<section id="appointments" style="background-color: #f8f9f7; padding: 3rem 2rem; text-align: center;">
+  <h2 style="color: #a8bba1; font-size: 2rem; margin-bottom: 1rem;">Book a Session</h2>
+  <p style="max-width: 700px; margin: 0 auto 2.5rem; color: #555;">
+    Select the service you would like to book and complete the form below. 
+    Once you choose a service, you can view my availability and book your preferred time directly.
+  </p>
 
-  <section id="book">
-    <h2>Book an Appointment</h2>
-    <p>
-      To schedule a session, please fill out the form below or email us directly at 
-      <a href="mailto:nunezacademicservices@gmail.com">nunezacademicservices@gmail.com</a>.
-    </p>
-    <form class="book-form" onsubmit="handleSubmit(event)">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="What would you like help with?" rows="4" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <div id="confirmation" class="book-info" style="display:none;">
-      Thank you for your message! We’ll get back to you soon.
-    </div>
-  </section>
+  <form id="bookingForm" action="https://formsubmit.co/nunezacademicservices@gmail.com" method="POST"
+        style="background-color: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+               max-width: 600px; margin: 0 auto; padding: 2rem; text-align: left;">
+    
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required
+           style="width:100%;padding:0.75rem;border:1px solid #ccc;border-radius:8px;margin-bottom:1rem;">
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required
+           style="width:100%;padding:0.75rem;border:1px solid #ccc;border-radius:8px;margin-bottom:1rem;">
+
+    <label for="service">Select Service</label>
+    <select id="service" name="service" required
+            style="width:100%;padding:0.75rem;border:1px solid #ccc;border-radius:8px;margin-bottom:1rem;">
+      <option value="">-- Please Choose an Option --</option>
+      <option value="One-on-One Tutoring">One-on-One Tutoring</option>
+      <option value="Group Tutoring">Group Tutoring</option>
+      <option value="Mentorship">One-on-One Mentorship</option>
+      <option value="Consultation">Academic Consultation</option>
+    </select>
+
+    <label for="subject">Subject or Topic</label>
+    <input type="text" id="subject" name="subject" placeholder="e.g. CXC Mathematics, Physics, or Academic Planning" required
+           style="width:100%;padding:0.75rem;border:1px solid #ccc;border-radius:8px;margin-bottom:1rem;">
+
+    <label for="message">Additional Details</label>
+    <textarea id="message" name="message" rows="4" placeholder="Share any details or preferred times for your session..."
+              style="width:100%;padding:0.75rem;border:1px solid #ccc;border-radius:8px;"></textarea>
+
+    <input type="hidden" name="_subject" value="New Session Request from Nunez Academic Services">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://YOURDOMAIN.github.io/thank-you.html">
+
+    <button type="submit"
+            style="background-color:#a8bba1;color:white;font-weight:bold;border:none;border-radius:25px;
+                   padding:0.75rem 1.5rem;margin-top:1.5rem;cursor:pointer;transition:all 0.3s ease;width:100%;">
+      Submit Request
+    </button>
+  </form>
+
+  <!-- Hidden Booking Options -->
+  <div id="calendarSection" style="display:none; margin-top: 3rem;">
+    <h3 style="color:#a8bba1;">View Availability & Book a Time</h3>
+    <p style="color:#555;">After selecting your service, view my available times and book directly below:</p>
+
+    <!-- Google Calendar Booking Button -->
+    <a href="https://calendar.app.google/mBXuKJhfe5YeVAAr5" target="_blank" class="book-button" 
+       style="display:inline-block;background-color:#a8bba1;color:white;font-weight:bold;padding:0.75rem 1.75rem;
+              border-radius:30px;text-decoration:none;margin:1rem 0;transition:all 0.3s ease;">
+      Open Booking Page
+    </a>
+
+    <!-- Embedded Google Calendar -->
+    <iframe src="<!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2YM-WQjxokCFTI25liNMgIN9WsLvmJyRXIVjNV24fjP5eR3wocglGIsQb2Uj3KF0BJbUzpo1q3?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->" 
+            style="border:0;width:100%;max-width:800px;height:600px;border-radius:12px;
+                   box-shadow:0 4px 12px rgba(0,0,0,0.1);" 
+            frameborder="0" scrolling="no">
+    </iframe>
+  </div>
+
+  <!-- Reveal Calendar When Service Is Selected -->
+  <script>
+    document.getElementById("service").addEventListener("change", function() {
+      const calendarSection = document.getElementById("calendarSection");
+      if (this.value) {
+        calendarSection.style.display = "block";
+        calendarSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        calendarSection.style.display = "none";
+      }
+    });
+  </script>
+</section>
+
+
 
   <section id="payment">
     <h2>Payment Information</h2>
@@ -477,6 +544,7 @@
   </script>
 </body>
 </html>
+
 
 
 
