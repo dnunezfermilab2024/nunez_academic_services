@@ -488,27 +488,74 @@
 
 
 
-  <section id="payment">
-    <h2>Payment Information</h2>
-    <p>
-      Nunez Academic Services accepts payments from both Jamaican and American residents. 
-      Once your appointment is confirmed, detailed payment instructions will be provided via email.
-    </p>
-  </section>
+<section id="payment" style="background-color: #ffffff; padding: 3rem 2rem; text-align: center;">
+  <h2 style="color: #a8bba1; font-size: 2rem; margin-bottom: 1.5rem;">Payment Information</h2>
+  <p style="max-width: 700px; margin: 0 auto 2rem; color: #555;">
+    To maintain security and ensure smooth transactions, all payments are made through verified bank transfers only. 
+    <strong>No in-person transactions</strong> are accepted at this time.
+  </p>
 
-  <footer>
-    <p>&copy; 2025 Nunez Academic Services | All Rights Reserved</p>
-  </footer>
-
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      document.querySelector('.book-form').reset();
-      document.getElementById('confirmation').style.display = 'block';
+  <style>
+    .payment-card {
+      background-color: #f8f9f7;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
     }
-  </script>
-</body>
-</html>
+
+    .payment-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(168, 187, 161, 0.35);
+    }
+
+    .payment-icon {
+      font-size: 2.5rem;
+      color: #f4b6c2;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .payment-card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+
+    <div class="payment-card">
+      <div class="payment-icon">🇯🇲</div>
+      <h3 style="color: #a8bba1;">Jamaican Residents</h3>
+      <p style="color: #555;">
+        Payments can be made via <strong>Scotiabank Jamaica</strong> transfer only. 
+        Please email <strong>nunezacademicservices@gmail.com</strong> to securely receive the account details before sending any funds.
+      </p>
+    </div>
+
+    <div class="payment-card">
+      <div class="payment-icon">🇺🇸</div>
+      <h3 style="color: #a8bba1;">U.S. Residents</h3>
+      <p style="color: #555;">
+        Payments can be made via <strong>Wells Fargo Bank</strong> transfer only. 
+        Please email <strong>nunezacademicservices@gmail.com</strong> to confirm payment information prior to completing the transaction.
+      </p>
+    </div>
+
+  </div>
+
+  <p style="margin-top: 2.5rem; color: #555;">
+    💡 <em>After payment confirmation, your session will be officially scheduled, and you will receive a confirmation email.</em>
+  </p>
+
+  <a href="mailto:nunezacademicservices@gmail.com"
+     style="display:inline-block;margin-top:1.5rem;background-color:#a8bba1;color:white;font-weight:bold;
+            padding:0.75rem 1.75rem;border-radius:30px;text-decoration:none;transition:all 0.3s ease;">
+    Contact for Payment Details
+  </a>
+</section>
 
 
 
