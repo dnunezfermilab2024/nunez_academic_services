@@ -227,21 +227,29 @@
       to learn more about my academic work and experiences.
     </p>
   </div>
-</section>
+  
 <section id="services" style="background-color: #f8f9f7; padding: 3rem 2rem; text-align: center;">
   <h2 style="color: #a8bba1; font-size: 2rem; margin-bottom: 1.5rem;">Services</h2>
   <p style="max-width: 700px; margin: 0 auto 2.5rem; color: #555;">
-    Explore the personalized academic services I offer. Whether you're preparing for exams, seeking group support, or in need of academic consultation, each session is designed to help you succeed.
+    Explore the personalized academic services I offer. Each session is designed to help you strengthen your understanding and achieve lasting confidence in your studies.
   </p>
 
   <style>
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
     .service-card {
       background-color: #fff;
       border-radius: 16px;
       padding: 2rem;
-      width: 280px;
+      width: 300px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
+      text-align: center;
     }
 
     .service-card:hover {
@@ -267,43 +275,47 @@
     }
 
     @media (max-width: 768px) {
-      .service-card {
-        width: 100%;
-        max-width: 320px;
+      .services-container {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 
- <div class="service-card">
-  <div class="service-icon">🎓</div>
-  <h3 style="color: #a8bba1;">One-on-One Tutoring</h3>
-  <p style="color: #555;">
-    Personalized 1 hour and 30 minute sessions designed to match each student's learning style, 
-    helping them master difficult concepts at their own pace.
-  </p>
-  <span class="price-tag">$30 per 1.5-hour session</span>
-</div>
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-icon">🎓</div>
+      <h3 style="color: #a8bba1;">One-on-One Tutoring</h3>
+      <p style="color: #555;">
+        Personalized <strong>1 hour and 30 minute</strong> sessions tailored to each student’s learning style, helping them master challenging concepts and achieve academic success.
+      </p>
+      <span class="price-tag">$30 per 1.5-hour session</span>
+    </div>
 
-<div class="service-card">
-  <div class="service-icon">👥</div>
-  <h3 style="color: #a8bba1;">Group Tutoring</h3>
-  <p style="color: #555;">
-    Interactive 1 hour and 30 minute group sessions that promote collaboration, 
-    discussion, and confidence-building in a supportive learning environment.
-  </p>
-  <span class="price-tag">$20 per 1.5-hour session</span>
-</div>
+    <div class="service-card">
+      <div class="service-icon">👥</div>
+      <h3 style="color: #a8bba1;">Group Tutoring</h3>
+      <p style="color: #555;">
+        Collaborative <strong>1 hour and 30 minute</strong> group sessions that encourage discussion, teamwork, and shared learning in a supportive environment.
+      </p>
+      <span class="price-tag">$20 per 1.5-hour session</span>
+    </div>
 
-<div class="service-card">
-  <div class="service-icon">💬</div>
-  <h3 style="color: #a8bba1;">Academic Consultation</h3>
-  <p style="color: #555;">
-    Focused 45-minute one-on-one sessions that provide personalized study planning, 
-    academic guidance, and success strategies.
+    <div class="service-card">
+      <div class="service-icon">💬</div>
+      <h3 style="color: #a8bba1;">Academic Consultation</h3>
+      <p style="color: #555;">
+        Focused <strong>45-minute</strong> one-on-one sessions that provide study planning, academic success strategies, and goal-setting support.
+      </p>
+      <span class="price-tag">$50 per 45-minute session</span>
+    </div>
+  </div>
+
+  <p style="margin-top: 2rem; color: #555; font-style: italic;">
+    ⏰ <strong>Session Duration:</strong> One-on-One and Group Tutoring sessions are 1 hour and 30 minutes each. Academic Consultations are 45 minutes.
   </p>
-  <span class="price-tag">$50 per 45-minute session</span>
-</div>
 </section>
+
 
 
 <section id="subjects" style="background-color: white; padding: 3rem 2rem; text-align: center;">
@@ -566,6 +578,7 @@
     Contact for Payment Details
   </a>
 </section>
+
 
 
 
